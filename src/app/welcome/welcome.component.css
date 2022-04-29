@@ -3,7 +3,7 @@
 }
 
 mat-card {
-  margin: 10px auto;
+  margin: 10px !important;
 }
 
 mat-card:hover {
