@@ -31,11 +31,6 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.isLoading$ = this.store.select(fromRoot.getIsLoading);
-    // this.loadingSubscription = this.uiService.loadingStateChanged.subscribe(
-    //   (isLoading) => {
-    //     this.isLoading = isLoading;
-    //   }
-    // );
     this.loginForm = new FormGroup({
       email: new FormControl('', {
         validators: [Validators.required, Validators.email],
@@ -44,6 +39,11 @@ export class LoginComponent implements OnInit {
         validators: [Validators.required],
       }),
     });
+    // this.loadingSubscription = this.uiService.loadingStateChanged.subscribe(
+    //   (isLoading) => {
+    //     this.isLoading = isLoading;
+    //   }
+    // );
   }
 
   // ngOnDestroy(): void {

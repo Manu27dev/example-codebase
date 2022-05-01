@@ -1,11 +1,90 @@
 .welcome {
-  text-align: center;
+  padding: 1rem 0;
+  margin: 10rem auto;
 }
 
 mat-card {
-  margin: 10px !important;
+  margin: 20px !important;
 }
 
 mat-card:hover {
   cursor: pointer;
+}
+
+.text {
+  text-align: center;
+}
+
+.home-bg {
+  background: url(../../assets/home.svg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  max-width: 1200px;
+  margin: 4rem auto;
+  border-radius: 12px;
+}
+
+.home-bg .home {
+  min-height: 40rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+
+.main-content {
+  width: 25rem;
+  text-align: center;
+  margin: auto;
+}
+
+.content {
+  width: 25rem;
+  text-align: center;
+  margin: 30px;
+}
+
+.home-bg .home .content h1 {
+  font-size: 4rem;
+  color: black;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about .content {
+  flex: 1 1 30rem;
+}
+
+.about .image {
+  flex: 1 1 30rem;
+  margin: 2rem;
+}
+
+.about .image img {
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 10rem auto;
+}
+
+.footer .content {
+  flex: 1 1 30rem;
+}
+
+.footer .image {
+  flex: 1 1 30rem;
+  margin: 2rem;
+}
+
+.footer .image img {
+  width: 100%;
 }

@@ -2,9 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { TrainingService } from './../servicies/training.service';
 import { Exercise } from './../model/exercise.model';
 import { NgForm } from '@angular/forms';
-// import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { Observable, Subscription } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 import { UiService } from './../../shared/ui.service';
 import { Store } from '@ngrx/store';
 import * as fromTraining from '../training.reducer';
@@ -38,6 +36,8 @@ export class NewTrainingComponent implements OnInit {
 
   ngOnInit(): void {
     this.isLoading$ = this.store.select(fromRoot.getIsLoading);
+    this.exercises$ = this.store.select(fromTraining.getAvailableExercises);
+    this.fetchExercises();
     // this.loadingSubscription = this.uiService.loadingStateChanged.subscribe(
     //   (isLoading) => {
     //     this.isLoading = isLoading;
@@ -48,8 +48,6 @@ export class NewTrainingComponent implements OnInit {
     //     this.exercises = exercises;
     //   }
     // );
-    this.exercises$ = this.store.select(fromTraining.getAvailableExercises);
-    this.fetchExercises();
   }
 
   // ngOnDestroy(): void {

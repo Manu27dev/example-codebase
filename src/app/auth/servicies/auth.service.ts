@@ -33,7 +33,7 @@ export class AuthService {
         this.store.dispatch(new Auth.SetAuthenticated());
         // this.isAuthThenAutenticated = true;
         // this.authChange.next(true);
-        this.router.navigateByUrl('/training');
+        this.router.navigateByUrl('/welcome');
       } else {
         this.trainingService.cancelSubscription();
         // this.authChange.next(false);
